@@ -2,64 +2,22 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Selected research and engineering work.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
-horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+A selected set of projects related to intelligent agents, structured artifact editing, and robot control.
 
-{% else %}
+## Agent systems
 
-<!-- Display projects without categories -->
+### [Text2IFC / IFC Repair — Language-Driven Structured 3D Editing]({{ '/projects/text2ifc/' | relative_url }})
+A system for translating natural-language building requirements into verifiable IFC artifacts, including controlled local repair, layered checks, and IFC-to-text round-trip research. [Code](https://github.com/770122whrt/text2IFC)
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+### [WeAgent — Multi-Agent Collaboration]({{ '/projects/weagent/' | relative_url }})
+A project involving multiple agents working together on shared tasks. Architecture, implementation details and any competition details will be documented once verified.
 
-  <!-- Generate cards for each project -->
+## Reinforcement learning & robotics
 
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+### [EASYkoopman — AUV Dynamics and Control]({{ '/projects/easykoopman/' | relative_url }})
+Simulation-based research on Koopman representations, physics-informed prediction, and MPC for underwater vehicles, with carefully scoped cross-condition evaluation. [Code](https://github.com/770122whrt/EASYkoopman)
