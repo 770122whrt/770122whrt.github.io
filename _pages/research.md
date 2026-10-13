@@ -2,31 +2,51 @@
 layout: page
 title: research
 permalink: /research/
-description: Research interests and current directions.
+description: Research questions and possible approaches in underwater robotics and AI agents.
 nav: true
 nav_order: 2
 ---
 
-My work and interests fall into two broad research directions. The topics below describe **research questions and areas of exploration**, not necessarily completed capabilities.
+I am interested in two areas: **underwater robot intelligence** and **AI agent systems**. For each direction, I start from a research problem rather than a particular algorithm or a project's benchmark results.
 
-## Reinforcement Learning & Robot Control
+## Underwater Robotics: Perception, Control & Self-Evolution
 
-I am interested in combining learning-based policies with model-based control, especially for underwater robots:
+### Motivation
 
-- **Reinforcement learning:** PPO and other policy optimization methods for decision-making and control.
-- **Dynamics modeling:** Koopman representations, physical models, and their combinations for predicting nonlinear dynamics.
-- **Planning and control:** Model predictive control (MPC), uncertainty and robustness under changing dynamics.
-- **Sim-to-real:** Understanding what transfers from simulation, what fails, and how to improve cross-condition or cross-platform generalization.
+Underwater robots operate with **partial observations**, nonlinear dynamics, unknown disturbances, and limited opportunities for external guidance. A control strategy that works in simulation may not transfer well to a different environment or physical platform. Beyond completing a single task, I want to understand how an underwater robot can **adapt during a mission** and improve from accumulated interaction.
 
-A related project is [EASYkoopman / AUV Control]({{ '/projects/easykoopman/' | relative_url }}). Its currently documented results are **simulation-based prediction experiments**, not completed real-robot transfer.
+### Research questions
 
-## AI Agents, Harness, Memory & Retrieval
+- How should robots combine **environmental perception** with their **own body state, motion constraints, and control history**?
+- How can perception and control remain effective when dynamics or environmental conditions change?
+- What should be adapted quickly during operation, and what should evolve more slowly from experience?
+- How can representations and policies become more transferable across simulation conditions and real deployments?
 
-I am also interested in how to build agents that can execute long or complex tasks with reliable context and tool use:
+### Ideas and possible approaches
 
-- **Multi-agent systems:** Role specialization, communication, coordination, and workflow execution.
-- **Agent harness:** Tool interfaces, orchestration, state tracking, feedback loops, and execution boundaries.
-- **Memory and retrieval:** Selecting relevant context and experiences, and deciding what information should be retrieved, retained, or revisited.
-- **Structured action and verification:** Converting natural-language intentions into constrained changes, followed by checks against the resulting artifact.
+I want to explore **perception- and body-aware state representations**, combining local observations, robot attitude, velocity, and past actions where useful. For control, I am interested in combining **physics-informed or Koopman-based dynamics models** with **model predictive control (MPC)**, and investigating **reinforcement learning** methods such as **PPO** where interaction-driven policy learning can help.
 
-Related projects include [WeAgent]({{ '/projects/weagent/' | relative_url }}) and [Text2IFC / IFC Repair]({{ '/projects/text2ifc/' | relative_url }}).
+A possible research direction distinguishes **fast adaptation** to changing local conditions from **slower experience-driven updates** to models, policies, or reusable knowledge. The larger aim is to connect perception, control feedback, and evolving experience, rather than optimizing any single algorithm in isolation.
+
+Related exploration: [EASYkoopman / AUV Control]({{ '/projects/easykoopman/' | relative_url }}).
+
+## AI Agents: Harness, Memory & Retrieval
+
+### Motivation
+
+Long-running agents operate across tools, documents, uncertain requests, and changing task state. Relevant context may be lost or buried, and an agent may act without sufficient information. Multiple agents bring additional questions of handoff, responsibility, and coordination.
+
+### Research questions
+
+- When should an agent **retrieve information, consult memory, ask for clarification, or act**?
+- Which parts of task state and tool execution should be maintained by an **agent harness** rather than squeezed into a prompt?
+- How can retrieved evidence and previous interactions be stored with enough structure and provenance to remain useful?
+- How should multiple agents coordinate work without redundant or contradictory actions?
+
+### Ideas and possible approaches
+
+I am interested in harnesses that make **task state, evidence, tool interaction, and feedback** explicit. **Retrieval** can locate relevant external context; **memory** can retain reusable experiences and decisions. A useful system should decide what to surface, rather than indiscriminately appending all available text.
+
+I also want to explore **multi-agent orchestration**, feedback-driven revision, and the distinction between uncertain interpretation and a well-grounded action.
+
+Related explorations: [WeAgent]({{ '/projects/weagent/' | relative_url }}) and [Text2IFC / IFC Repair]({{ '/projects/text2ifc/' | relative_url }}).

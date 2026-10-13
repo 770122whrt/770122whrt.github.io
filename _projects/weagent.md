@@ -1,14 +1,22 @@
 ---
 layout: page
 title: WeAgent
-description: A project exploring collaboration among multiple AI agents.
+description: Exploring collaborative workflows among multiple AI agents.
 permalink: /projects/weagent/
 importance: 2
 category: agent
 ---
 
-**WeAgent** is a multi-agent collaboration project in which several agents cooperate on shared tasks.
+**WeAgent** is a multi-agent collaboration project.
 
-It is part of my engineering portfolio for exploring how agents divide work, coordinate execution and interact within a shared workflow.
+## Motivation
 
-A more detailed technical write-up (system architecture, my contributions, evaluation, demo, and repository link) will be added after the relevant details have been verified. No competition result is claimed here.
+A single agent may have difficulty handling a task that requires several skills, tools, or kinds of context. Distributing work across agents can help organize the process, but introduces questions of task decomposition, communication, and consistency.
+
+## Technical ideas
+
+- **Task decomposition:** Explore when separate agent roles are useful.
+- **Coordination:** Consider how agents share task state and hand off work.
+- **Harness and feedback:** Explore orchestration, execution traces, and feedback within a multi-agent workflow.
+
+A detailed architecture, source link, and demo can be added once those materials are ready to share.

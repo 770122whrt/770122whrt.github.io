@@ -19,15 +19,15 @@ Undergraduate degree · Completed
 
 ### 杭州极限智控
 
-*Completed internship*
+_Completed internship_
 
 Worked on neural-network model optimization and deployment-oriented engineering tasks. Dates, role title and specific deliverables will be added after confirmation.
 
 ### 找北求职
 
-*Completed internship*
+_Completed internship_
 
-Worked on **business workflow optimization**, **data analysis**, and **AI-agent automation**. Project scope and measurable outcomes will be added after confirmation.
+Worked on **business workflow optimization**, **data analysis**, and **AI-agent automation**. Project scope and specific responsibilities will be expanded after confirmation.
 
 ---
 

@@ -2,11 +2,15 @@
 
 This repository uses the upstream [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme. The original template build system, GitHub Actions and dependencies are retained.
 
+## Editorial direction
+
+This is a research homepage, not a paper results page or a job résumé. Frame content as **motivation / research questions** followed by **ideas / possible approaches**. In underwater robotics, perception, control, and self-evolution are the research focus; reinforcement learning (such as PPO), Koopman models, and MPC are possible methods. AI agent interests center on harness design, memory, retrieval, and multi-agent coordination. Do not publish experimental scores or unverified capabilities at this stage.
+
 ## Maintained pages
 
 - `_pages/about.md` — homepage and biography
-- `_pages/research.md` — research interests
-- `_pages/projects.md` + `_projects/{text2ifc,weagent,easykoopman}.md` — selected work
+- `_pages/research.md` — motivation, research questions, and possible approaches
+- `_pages/projects.md` + `_projects/{text2ifc,weagent,easykoopman}.md` — concrete research explorations
 - `_pages/experience.md` — education and two completed internships
 - `_config.yml` — site identity, domain, display options and sample-content exclusions
 - `_data/socials.yml` — public social links
@@ -26,4 +30,4 @@ The initial al-folio template ships with example Einstein publications, placehol
 - The site URL is `https://770122whrt.github.io` and `baseurl:` must remain empty.
 - GitHub Actions builds the site and publishes to the `gh-pages` branch; configure GitHub Pages to serve that branch.
 
-This first personalization intentionally does not assert completed real-world sim-to-real experiments or unconfirmed competition results.
+Project pages are intentionally motivation- and method-oriented. Publication and evaluation claims can be added when independently verified.

@@ -2,22 +2,37 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Selected research and engineering work.
+description: Selected explorations connected to my research interests.
 nav: true
 nav_order: 3
 ---
 
-A selected set of projects related to intelligent agents, structured artifact editing, and robot control.
+These projects provide concrete settings for the research questions I want to explore. I focus on **motivation and technical ideas**, rather than experimental scores or publication claims.
 
-## Agent systems
+## Underwater robotics
 
-### [Text2IFC / IFC Repair — Language-Driven Structured 3D Editing]({{ '/projects/text2ifc/' | relative_url }})
-A system for translating natural-language building requirements into verifiable IFC artifacts, including controlled local repair, layered checks, and IFC-to-text round-trip research. [Code](https://github.com/770122whrt/text2IFC)
+### EASYkoopman / AUV Control
 
-### [WeAgent — Multi-Agent Collaboration]({{ '/projects/weagent/' | relative_url }})
-A project involving multiple agents working together on shared tasks. Architecture, implementation details and any competition details will be documented once verified.
+**Question:** How can an underwater robot cope with nonlinear, changing dynamics without relying on a single fixed model?
 
-## Reinforcement learning & robotics
+**Approach:** Explore physical and Koopman-based models, model predictive control, and possible links to reinforcement learning and adaptive control.
 
-### [EASYkoopman — AUV Dynamics and Control]({{ '/projects/easykoopman/' | relative_url }})
-Simulation-based research on Koopman representations, physics-informed prediction, and MPC for underwater vehicles, with carefully scoped cross-condition evaluation. [Code](https://github.com/770122whrt/EASYkoopman)
+[Project notes]({{ '/projects/easykoopman/' | relative_url }}) · [Repository](https://github.com/770122whrt/EASYkoopman)
+
+## AI agents
+
+### Text2IFC / IFC Repair
+
+**Question:** How can an agent interpret ambiguous language and make well-scoped changes to a structured 3D artifact?
+
+**Approach:** Explore structured intent, constrained editing, retrieval or clarification of missing context, and verification within the execution loop.
+
+[Project notes]({{ '/projects/text2ifc/' | relative_url }}) · [Repository](https://github.com/770122whrt/text2IFC)
+
+### WeAgent
+
+**Question:** How can multiple agents coordinate on a shared task while keeping roles, context, and actions coherent?
+
+**Approach:** Explore task decomposition, agent communication, and orchestration in shared workflows.
+
+[Project notes]({{ '/projects/weagent/' | relative_url }})
